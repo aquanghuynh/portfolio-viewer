@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .viewer {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .toolbar {
+            height: 50px;
+            background: #222;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+
+        .toolbar a {
+            color: white;
+            text-decoration: none;
+            background: #444;
+            padding: 7px 12px;
+            border-radius: 4px;
+        }
+
+        .toolbar a:hover {
+            background: #555;
+        }
+
+        .pdf-container {
+            flex: 1;
+            width: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="viewer">
+
+    <div class="toolbar">
+        <div>PDF Viewer</div>
+
+        <a href="your-file.pdf" target="_blank">
+            Open PDF
+        </a>
+    </div>
+
+    <div class="pdf-container">
+        <iframe
+            src="Design Portfolio by Quang Huynh.pdf"
+            title="PDF Viewer">
+        </iframe>
+    </div>
+
+</div>
+
+</body>
+</html>
